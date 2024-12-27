@@ -1,0 +1,783 @@
+@font-face {
+  font-family: "Flama SemiBold";
+  src: url(../fonts/Flama-Semibold.otf);
+}
+
+@font-face {
+  font-family: "Flama Book";
+  src: url(../fonts/Flama-Book.otf);
+}
+
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1A1A1A !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0.35em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #131313;
+  outline: 0px solid slategrey;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.first-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.second-gradient {
+  position: absolute;
+  left: 0;
+  top: 200px;
+}
+
+.third-gradient {
+  position: absolute;
+  right: 0;
+  top: 1400px;
+}
+
+.fourth-gradient {
+  position: absolute;
+  left: 0;
+  top: 1800px;
+  z-index: -1;
+}
+/* MAIN HOLDER */
+
+section.hero {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0 5rem 0;
+  background-color: transparent;
+}
+
+section.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.hero .container .centered-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.hero .container .centered-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px ;
+}
+
+section.hero .container .centered-description .title {
+  font-size: 40px;
+  line-height: 54px;
+  text-align: center;
+  font-weight: 550;
+  font-family: "obviously-variable";
+  color: #F2F2F2;
+}
+
+#myVideo {
+  position: absolute;
+  right: 50%;
+  top: 350px;
+  z-index: -1;
+  width: 620px;
+  mix-blend-mode: lighten;
+  transform: translateX(50%);
+}
+
+#myVideo2 {
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  width: 450px;
+  top: 2450px;
+  mix-blend-mode: lighten;
+  transform: translateX(50%);
+}
+
+section.hero .container .centered-description .subtitle {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 2%;
+  color: #F2F2F2;
+  font-family: "Flama Book", sans-serif;
+}
+
+
+section.hero .container .framed-form {
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  width: 586px;
+}
+
+.box {
+  position: relative;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px; 
+  padding: 2px; 
+  background:linear-gradient(270deg, #6a64ff, #b29bf4, #17aede, #aedf7c); 
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+
+section.hero .container .framed-form .title {
+  font-size: 22px;
+  line-height: 30.8px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  font-family: "Flama Book", sans-serif;
+}
+
+section.hero .container .framed-form .subtitle {
+  font-size: 16px;
+  line-height: 23.2px;
+  color: #FFF;
+  font-family: "Flama Book", sans-serif;
+}
+section.hero .container .framed-form form {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   justify-content: space-between;
+   margin-top: 20px;
+}
+
+section.hero .container .framed-form form input[type='email'] {
+  width: 70%;
+  border: 1px solid #BFBFBF;
+  border-radius: 200px;
+  background-color: transparent;
+  padding: 8px 16px 8px 16px;
+  font-family: "Flama Book";
+  color: #FFFFFF;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+section.hero .container .framed-form form input[type='submit'] {
+  width: 25%;
+  border: 1px solid #6A64FF;
+  border-radius: 200px;
+  background-color: #6A64FF;
+  font-family: "Flama Book";
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+section.hero .container .framed-form form input[type='submit']:hover {
+  width: 25%;
+  border: 1px solid #AEDF7C;
+  border-radius: 200px;
+  background-color: #AEDF7C;
+  font-family: "Flama Book";
+  text-transform: uppercase;
+  color: #1A1A1A;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* ABOVE SECTION */
+section.above {
+  /* background-image: url("../img/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  padding: 120px 0;
+}
+
+section.above .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.above .container .cut-above {
+  padding: 0 20px;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+  width: 500px;
+}
+
+section.above .container .above-form-mobile {
+  display: none;
+ }
+
+section.above .container .cut-above .title {
+  font-size: 56px;
+  line-height: 75.6px;
+  font-weight: 550;
+  font-family: "obviously-variable";
+  color: #FFFFFF;
+}
+
+section.above .container .cut-above .subtitle {
+  font-size: 18px;
+  line-height: 26.1px;
+  letter-spacing: 1px;
+  font-family: "Flama Book";
+  color: #F2F2F2;
+  margin-bottom: 54px;
+}
+
+section.above .container .cut-above .above-form {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-image: linear-gradient(95.93deg, #AEDF7C 3.3%, #17AEDE 34.34%, #B29BF4 65.38%, #6A64FF 96.42%) 1;
+  padding-top: 54px;
+}
+
+section.above .container .cut-above .above-form .form-title {
+  font-size: 22px;
+  line-height: 30.8px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: "Flama Book";
+}
+
+section.above .container .cut-above .above-form form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+section.above .container .cut-above .above-form form input[type='email']{
+ width: 70%;
+ border: 1px solid #BFBFBF;
+ border-radius: 200px;
+ background-color: transparent;
+ padding: 8px 16px 8px 16px;
+ font-family: "Flama Book";
+ color: #FFFFFF;
+ font-size: 18px;
+ letter-spacing: 1px;
+}
+
+section.above .container .cut-above .above-form form input[type='submit']{
+ width: 25%;
+ border: 1px solid #6A64FF;
+ border-radius: 200px;
+ background-color: #6A64FF;
+ font-family: "Flama Book";
+ text-transform: uppercase;
+ color: #FFFFFF;
+ font-size: 18px;
+ line-height: 21.6px;
+ letter-spacing: 1px;
+ text-align: center;
+}
+
+section.above .container .cut-above .above-form form input[type='submit']:hover{
+  width: 25%;
+  border: 1px solid #AEDF7C;
+  border-radius: 200px;
+  background-color: #AEDF7C;
+  font-family: "Flama Book";
+  text-transform: uppercase;
+  color: #1A1A1A;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: 1px;
+  text-align: center;
+ }
+
+
+section.above .container .items-above {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+section.above .container .items-above .single-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 10px;
+}
+
+section.above .container .items-above .single-item .item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+section.above .container .items-above .single-item .item-content .title {
+  font-size: 32px;
+  line-height: 43.2px;
+  color: #FFFFFF;
+  font-family: "obviously-variable"
+}
+
+section.above .container .items-above .single-item .item-content .subtitle {
+  font-size: 16px;
+  line-height: 23.2px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  font-family: "Flama Book"
+}
+
+section.above .container .items-above .single-item .item-content .title-icon {
+  display: none;
+}
+/* END ABOVE SECTION */
+
+/* PARTNERS SECTION */
+section.partners {
+  /* background-image: url("../img/bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+  padding: 120px 0;
+}
+
+section.partners .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.partners .container .title {
+  font-size: 40px;
+  line-height: 54px;
+  text-align: center;
+  font-weight: 550;
+  font-family: "obviously-variable";
+  color: #F2F2F2;
+  margin-bottom: 30px;
+}
+
+section.partners .container .partners-logo {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+/* END PARTNERS SECTION */
+
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #262626;
+}
+
+footer .first-holder {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 80px 32px 80px;
+  background-color: #1A1A1A;
+}
+
+footer .first-holder .follow {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+
+footer .first-holder .follow .title {
+  font-size: 14px;
+  font-weight: 19.6px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  font-family: "obviously-variable";
+  text-transform: uppercase;
+}
+
+footer .first-holder .follow .social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer .first-holder .follow .social-icons svg:hover path {
+  fill: #AEDF7C;
+}
+
+footer .first-holder .copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+footer .first-holder .copyright .subtitle{
+  font-size: 13px;
+  line-height: 23.2px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #FFF;
+  font-family: "Flama Book";
+}
+
+footer .first-holder .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .first-holder .copyright .follow {
+  display: none;
+}
+
+/* RESPONSIVE */
+
+/* @media only screen and (min-width: 1202px) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1201px) {
+  .tablet-hidden {
+    display: none !important;
+  }
+
+  section.hero {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+} */
+
+@media only screen and (max-width: 766px) {
+ .first-gradient {
+  width: 100%;
+  z-index: -1;
+ }
+ .second-gradient {
+  width: 100%;
+  top: 500px;
+  z-index: -1;
+ }
+ .third-gradient {
+  width: 100%;
+  z-index: -1;
+ }
+ .fourth-gradient {
+  width: 100%;
+  top: 2600px;
+  left: auto;
+  z-index: -1;
+}
+
+.mobile-hidden {
+   display: none;
+}
+
+#myVideo {
+  width: 100%;
+  top: 200px;
+}
+
+#myVideo2 {
+  width: 100%;
+  top: 2800px;
+}
+
+ section.hero {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0 5rem 0;
+  background-color: transparent;
+ }
+
+ section.hero .container .centered-logo img {
+  width: 100%;
+ }
+
+ section.hero .container .centered-description {
+  margin-bottom: 50px;
+ }
+
+ section.hero .container .centered-description .title {
+  font-size: 34px;
+  line-height: 45.9px;
+ }
+
+ section.hero .container .centered-description .subtitle {
+  font-size: 18px;
+  line-height: 26.1px;
+ }
+
+ section.hero .container .centered-description .subtitle br {
+  display: none;
+ }
+
+ section.hero .container .framed-form {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+ }
+
+ section.hero .container .framed-form .subtitle {
+  text-align: left;
+ }
+
+ section.hero .container .framed-form .subtitle br {
+  display: none;
+ }
+
+ section.hero .container .framed-form form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+ }
+
+ section.hero .container .framed-form form input[type='email'] {
+  width: 100%;
+  border: 1px solid #BFBFBF;
+  border-radius: 200px;
+  background-color: transparent;
+  padding: 8px 16px 8px 16px;
+  font-family: "Flama Book";
+  color: #FFFFFF;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+section.hero .container .framed-form form input[type='submit'] {
+  width: 100%;
+  border: 1px solid #6A64FF;
+  border-radius: 200px;
+  background-color: #6A64FF;
+  font-family: "Flama Book";
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 13px;
+}
+
+section.hero .container .framed-form form input[type='submit']:hover {
+  width: 100%;
+  border: 1px solid #AEDF7C;
+  border-radius: 200px;
+  background-color: #AEDF7C;
+  font-family: "Flama Book";
+  text-transform: uppercase;
+  color: #1A1A1A;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+ section.above {
+  padding: 56px 0;
+ }
+
+ section.above .container {
+  display: flex;
+  flex-direction: column;
+ }
+
+ section.above .container .cut-above {
+  width: 100%;
+  position: relative;
+  top: auto;
+  padding: 0;
+ }
+
+ section.above .container .cut-above .title {
+  font-size: 34px;
+  line-height: 45.9px;
+ }
+
+ section.above .container .cut-above .subtitle {
+  font-size: 18px;
+  line-height: 26.1px
+ }
+ 
+ section.above .container .above-form-mobile {
+  display: initial;
+ }
+
+ section.above .container .above-form-mobile .form-title {
+  font-size: 22px;
+  line-height: 30.8px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: "Flama Book";
+}
+
+section.above .container .above-form-mobile form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  row-gap: 24px;
+}
+
+
+section.above .container .above-form-mobile form input[type='email']{
+ width: 100%;
+ border: 1px solid #BFBFBF;
+ border-radius: 200px;
+ background-color: transparent;
+ padding: 8px 16px 8px 16px;
+ font-family: "Flama Book";
+ color: #FFFFFF;
+ font-size: 18px;
+ letter-spacing: 1px;
+}
+
+section.above .container .above-form-mobile form input[type='submit']{
+ width: 100%;
+ border: 1px solid #6A64FF;
+ border-radius: 200px;
+ background-color: #6A64FF;
+ font-family: "Flama Book";
+ text-transform: uppercase;
+ color: #FFFFFF;
+ font-size: 18px;
+ line-height: 21.6px;
+ letter-spacing: 1px;
+ text-align: center;
+ padding: 13px;
+}
+
+section.above .container .above-form-mobile form input[type='submit']:hover{
+  width: 100%;
+  border: 1px solid #AEDF7C;
+  border-radius: 200px;
+  background-color: #AEDF7C;
+  font-family: "Flama Book";
+  text-transform: uppercase;
+  color: #1A1A1A;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: 1px;
+  text-align: center;
+ }
+
+ section.above .container .items-above {
+  padding: 0;
+ }
+
+ section.above .container .items-above .single-item {
+  display: flex;
+  flex-direction: column;
+ }
+
+ section.above .container .items-above .single-item .mobile-hidden {
+  display: none;
+ }
+
+ section.above .container .items-above .single-item .item-content .title-icon {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+
+ section.above .container .items-above .single-item .item-content .title-icon .title {
+  font-size: 24px;
+  line-height: 32.4px;
+ }
+
+ section.partners {
+  padding: 56px 0;
+ }
+
+ section.partners .container .title {
+  font-size: 34px;
+  line-height: 45.9px;
+  margin-bottom: 40px;
+ }
+
+ section.partners .container .partners-logo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+ }
+
+ section.partners .container .partners-logo img {
+  height: 40px;
+ }
+
+ footer .first-holder {
+  padding: 26px 40px;
+ }
+
+ footer .first-holder .mobile-hidden {
+  display: none;
+ }
+
+ footer .first-holder .copyright {
+  row-gap: 30px;
+ }
+
+ footer .first-holder .copyright .follow {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+ }
+
+ footer .first-holder .copyright .follow .social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+}
